@@ -14,4 +14,4 @@ WORKDIR /web-app
 
 EXPOSE 5000
 
-CMD [ "python3", "-m" , "flask", "run"]
+CMD [ "gunicorn", "app:flask_app()"]
