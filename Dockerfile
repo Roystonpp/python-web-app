@@ -6,12 +6,10 @@ RUN apk add python3 py3-pip
 
 RUN pip3 install Flask
 
-RUN pip3 install gunicorn
-
 RUN apk add --no-cache bash
 
 WORKDIR /web-app
 
 EXPOSE 5000
 
-CMD [ "gunicorn", "app:flask_app()"]
+CMD [ "python3", "-m" , "flask", "run", "--host=0.0.0.0" ]
