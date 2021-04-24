@@ -6,6 +6,8 @@ RUN apk add python3 py3-pip
 
 RUN pip3 install Flask
 
+RUN pip3 install gunicorn
+
 RUN apk add --no-cache bash
 
 WORKDIR /web-app
